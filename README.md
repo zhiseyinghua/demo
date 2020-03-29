@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # fc-express-typescript-template
 
 阿里云函数计算项目骨架。预设为HTTP触发器，适合开发微服务/Restful API/简易Web应用。
@@ -72,3 +73,6 @@ fun local start -d 3000
 fun deploy
 ```
 git s
+=======
+# white
+>>>>>>> b6ce31ada2e56a19ef0f969c63a88383bf25b9e1
