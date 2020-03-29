@@ -36,6 +36,8 @@
     "@elastic/elasticsearch": "^7.6.1",
     "@types/express": "^4.17.2",
     "@webserverless/fc-express": "latest",
-    "express": "^4.17.0"
+    "babel-plugin-dynamic-import-webpack": "^1.1.0",
+    "express": "^4.17.0",
+    "webpack-dev-server": "^2.9.1"
   }
 }

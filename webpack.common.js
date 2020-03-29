@@ -2,6 +2,9 @@ const path = require('path');
 
 module.exports = {
   entry: './src/index.ts',
+  resolve: {
+    extensions: ['.js', '.ts', '.json'],
+  },
   target: 'node',
   output: {
     path: path.resolve(__dirname, 'dist'),
