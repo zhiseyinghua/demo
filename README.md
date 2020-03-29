@@ -71,3 +71,4 @@ fun local start -d 3000
 ```bash
 fun deploy
 ```
+git s
