@@ -1,7 +1,7 @@
 import { Server } from '@webserverless/fc-express';
 import express from 'express';
 
-const app = express();
+const app = express()
 app.all('*', (req, res) => {
   res.send('Hello serverless with TypeScript & Express5!');
 });
