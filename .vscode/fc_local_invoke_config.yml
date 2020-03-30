@@ -7,3 +7,10 @@ templates:
           default_evt:
             type: file
             value: demo\demo\event.evt
+    demo-service:
+      pyq:
+        event: default_evt
+        events:
+          default_evt:
+            type: file
+            value: demo-service\pyq\event.evt
