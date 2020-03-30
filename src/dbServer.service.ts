@@ -1,6 +1,7 @@
 import { Observable, throwError, from } from 'rxjs';
 // const { Client } = require('@elastic/elasticsearch')
 import { Client } from '@elastic/elasticsearch'
+import { Login, ES_CONFIG } from './config';
 
 console.log('DbService');
 export class DbService {
@@ -13,17 +14,17 @@ export class DbService {
     static addStoreUser(): Observable<any> {
         console.log('addStoreUser StoreUserService');
         const client = new Client({
-            node: 'http://es-cn-mp91l4ghi000kekh0.public.elasticsearch.aliyuncs.com:9200',
+            node: Login.iP_NODE,
             auth: {
-                username: 'elastic',
-                password: 'Young533162903'
+                username: ES_CONFIG.USER_NAME,
+                password: ES_CONFIG.PASSWORD
             }
         })
         console.log('addStoreUser StoreUserService');
         return from(
             client.get({
                 index: 'user',
-                type: '_doc',
+                type: ES_CONFIG.TYPE,
                 id: '1'
             })
         )
