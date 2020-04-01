@@ -3,7 +3,7 @@ import { map } from 'rxjs/operators';
 import { Login, ES_CONFIG } from './config';
 var rp = require('request-promise');
 import { esAxios } from './login.interface';
-const nodemailer = require("nodemailer");
+const nodemailer = require('nodemailer');
 
 
 
@@ -56,7 +56,7 @@ export class ToolService {
      * 发送一条短信
      * @param email 
      */
-    static SendEmail(email: string,checMailNumber:number): Observable<any> {
+    static SendEmail(email: string): Observable<any> {
         let transporter = nodemailer.createTransport({
             service: 'qq',
             port: 465, // SMTP 端口
@@ -72,10 +72,9 @@ export class ToolService {
             from: '2777368650@qq.com', // sender address
             to: email, // list of receivers
             subject: "Hello ✔", // Subject line
-            text: "你的验证码是："+ checMailNumber, // plain text body
+            text: "你的验证码是："+ transporter, // plain text body
             // html: "<b>Hello world?</b>" // html body
         }))
     }
 
 }
-

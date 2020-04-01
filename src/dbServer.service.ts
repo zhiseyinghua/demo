@@ -34,4 +34,25 @@ export class DbService {
         }
         return from(ToolService.ESHttp(dataEsAios));
     }
+    // 
+    static LoginStorageKey(email:string): Observable<any> {
+        let dataEsAios: esAxios = {
+            url: Login.IP_URL + ES_CONFIG.TYPE +'/'+ ES_CONFIG. _SERACH,
+            body: {
+                "query": {
+                    "bool": {
+                        "must": [
+                            {
+                                "match": {
+                                    "email.keyword": "618779868511@qq.com"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            axiosType: 'get'
+        }
+        return from(ToolService.ESHttp(dataEsAios));
+    }
 }

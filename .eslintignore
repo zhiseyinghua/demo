@@ -1,6 +1,0 @@
-/dist/*
-node_modules
-webpack.common.js
-webpack.dev.js
-webpack.prod.js
-package.json
