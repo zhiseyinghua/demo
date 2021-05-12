@@ -41,7 +41,7 @@
     "en-decode-b64": "0.0.6",
     "express": "^4.17.0",
     "node-rsa": "^1.0.8",
-    "nodemailer": "^6.4.6",
+    "nodemailer": "^6.4.16",
     "random": "^2.2.0",
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
